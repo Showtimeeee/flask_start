@@ -1,7 +1,296 @@
-body{
+.all_notes_form,
+.add_data_form,
+.update_form,
+.delete_form{
+text-align: center;
+margin: 0 auto 5px;
+width: 60%;
+}
+
+.wrap {
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "header", "content", "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header{
+display:flex;
+
+}
+
+.empty_block{
+margin: 0 auto;
+height: 100px;
+
+}
+
+.logo_h1{
+width: 30%;
+margin: 0 auto;
+font-size: 50px;
+text-align: center;
+color: blue;
+margin-top: 50px;
+border: 5px solid yellow;
+border-bottom-left-radius: 200px;
+border-top-right-radius: 200px;
+text-shadow: 10px 3px 5px grey;
+box-shadow: -5px 5px 60px green;
+margin-bottom: 50px;
+}
+
+.random_note{
+width: 60%;
+margin: 40px auto;
+font-size: 20px;
+text-align: center;
+color: green;
+
+}
+
+.random_word{
+margin-bottom: 40px;
+}
+.word_input{
+width: 80%;
+height: 30px;
+padding-left: 20px;
+}
+
+input[type="text"]::placeholder{
+font-size: 14px;
+color: blue;
+font-style: italic;
+}
+
+.translate_input{
+width: 80%;
+margin-top: 10px;
+height: 30px;
+padding-left: 20px;
+}
+
+.button{
+margin-top: 10px;
+height: 30px;
+width: 150px;
+color: green;
+font-size: 15px;
+
+}
+
+p{
+font-style: italic;
+color: blue;
+font-size: 20px;
+margin: 5px auto;
+width: 100%;
 text-align: center;
 }
-.h1{
-font-size: 260px;
-color: orange;
+
+
+.content{
+width:100%;
+margin: 0 auto;
+text-align: right;
+box-shadow: 15px -6px 8px blue;
+}
+
+
+.info{
+display: flex;
+margin: 40px auto 0;
+height: 300px;
+border: 3px red double;
+box-shadow: -8px 5px 10px pink;
+box-shadow: 15px -6px 8px blue;
+align-items: center;
+
+}
+
+
+.logo{
+margin: 40px auto;
+width: 20%;
+border-radius: 200px;
+padding: 0 20px 20px;
+box-shadow: 0px 7px 5px green;
+align-items: baseline;
+
+}
+
+
+.description{
+width: 50%;
+font-size: 30px;
+margin: 0 auto;
+padding: 30px 0;
+color: grey;
+text-align: right;
+
+}
+
+
+.menu{
+display: flex;
+width:50%;
+margin: 20px auto;
+justify-content: space-between;
+align-items: center;
+
+}
+
+
+.menu a{
+padding: 10px;
+height:30px;
+text-decoration: none;
+font-size: 17px;
+color: green;
+text-transform: uppercase;
+font-style: italic;
+
+}
+
+
+
+.menu a:hover{
+outline: 1px grey solid;
+
+}
+
+
+.show_notes{
+display: flex;
+margin: 0 auto;
+justify-content: space-around;
+width: 60%;
+padding-top: 100px;
+align-self: baseline;
+
+}
+
+
+.bottom_block{
+display:flex;
+
+
+}
+
+.main_one,
+.main_two,
+.main_three{
+
+width: 30%;
+height: 60px;
+margin: 0 auto;
+
+}
+
+.main_bottom_p{
+background-color: Honeydew;
+color: grey;
+}
+
+
+.card{
+width:100%;
+margin-bottom: 100px;
+align-self: flex-end;
+
+
+}
+
+
+input[name="count"]{
+width: 30px;
+height:20px;
+color: red;
+margin-bottom: -20px;
+
+}
+
+.flash{
+margin: 0 auto;
+width:50%;
+padding: 5px 0;
+margin-bottom:10px;
+text-align: center;
+color: white;
+}
+
+.success{
+background-color: green;
+}
+
+.attention{
+background-color: green;
+color: red;
+}
+
+.error{
+background-color: red;
+
+}
+
+.ok_update{
+margin: 0 auto;
+width: 60%;
+padding: 10px;
+background-color: green;
+color: black;
+text-align: center;
+
+}
+
+.not_found_update{
+padding: 10px;
+background-color: #f44336;
+color: black;
+}
+
+
+
+.count_notes{
+width: 30px;
+height: 30px;
+margin-bottom: 20px;
+padding-left: 20px;
+
+
+}
+
+
+* { margin:0; padding:0; }
+body { font-family: sans-serif;}
+#content { margin: 50px; }
+a { text-decoration: none; }
+
+.expandable {
+background: #fff;
+overflow: hidden;
+color: #000;
+line-height: 50px;
+transition: all .5s ease-in-out;
+height: 0;
+ }
+
+ .expandable:target {
+  height: 50px;
+}
+
+
+.footer {
+margin-top: 20px;
+height: 120px;
+display: flex;
+background-color: antiquewhite;
+align-items: center;
+justify-content: center;
+text-align: center;
+font-size: 15px;
+font-family: monospace;
+
 }

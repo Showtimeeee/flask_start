@@ -11,12 +11,8 @@ lst_main_menu = [{'name': 'Главная', 'url': '/'},
 
 @app.route('/')
 def index():
-    return render_template('index.html', name='Seva', title='Главная страница', lst_main_menu=lst_main_menu)
+    return render_template('index.html', title='Главная страница', lst_main_menu=lst_main_menu)
 
-
-# @app.route('/about')
-# def about():
-#     return render_template('about.html', name='Seva', title='О проекте', lst_main_menu=lst_main_menu)
 
 
 @app.route('/add')
