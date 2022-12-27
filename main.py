@@ -1,6 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash, url_for, redirect
+
+from peewee import IntegrityError, fn
+
+from config import SECRET_KEY, DEBUG
+
+from models import English
+
 
 app = Flask(__name__)
+app.config.from_object(__name__)
+
 
 lst_main_menu = [{'name': 'Главная', 'url': '/'},
                  {'name': 'Добавить', 'url': '/add'},
@@ -14,10 +23,10 @@ def index():
     return render_template('index.html', title='Главная страница', lst_main_menu=lst_main_menu)
 
 
-
 @app.route('/add')
 def add():
     return render_template('add.html', title='Добавить', lst_main_menu=lst_main_menu)
+
 
 @app.route('/update')
 def update():
@@ -35,5 +44,5 @@ def show():
 
 
 if __name__ == "__main__":
-    app.run(debug=1, port=8000)
+    app.run(debug=DEBUG, port=8000)
 
